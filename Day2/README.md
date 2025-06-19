@@ -31,7 +31,35 @@ whoami           # Displays the currently logged in user
 ```
 
 ---
+## 👤 Section: Adding a User in Kali Linux
 
+> In Kali Linux, managing users and their privileges is essential for secure multi-user operations. Here's how to add a user step-by-step.
+
+---
+### ➕ Step 1: Add a New User
+```bash
+sudo adduser newusername
+```
+1.This command creates a new user.
+2.You will be prompted to set the password and optionally fill in other user info.
+
+
+###🛡️ Step 2: Grant Sudo Privileges (Optional)
+```bash
+sudo usermod -aG sudo newusername
+```
+1.Adds the user to the sudo group.
+2.Gives administrative/root-level permission.
+
+```bash
+su - newusername
+```
+###📄 Step 4: Verify if the User Exists
+```bash
+cat /etc/passwd | grep newusername
+
+```
+.Confirms the user is created by checking /etc/passwd
 ### 📂 Navigation
 
 ```bash
